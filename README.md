@@ -1,2 +1,1 @@
-# code-exercises
-Repositório para práticas de execícios de Programação
+# Meu repositório para prática de Programação
