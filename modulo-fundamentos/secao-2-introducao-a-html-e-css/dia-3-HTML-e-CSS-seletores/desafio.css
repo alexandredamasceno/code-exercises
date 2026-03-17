@@ -1,0 +1,31 @@
+div:hover {
+    border: 10px solid green;
+}
+
+#bigger:hover {
+    font-size: 40px;
+}
+
+#cor-primaria:hover {
+    background-color: blue;
+    font-style: italic;
+}
+
+#cor-secundaria:hover {
+    background-color: orange;
+}
+
+#cor-complementar:hover {
+    background-color: rgb(225 120 60);
+    font-style: italic;
+}
+
+#cor-escura:hover {
+    background-color: black;
+    color: white;
+}
+
+#cor-clara:hover {
+    background-color: aquamarine;
+    font-style: italic;
+}
