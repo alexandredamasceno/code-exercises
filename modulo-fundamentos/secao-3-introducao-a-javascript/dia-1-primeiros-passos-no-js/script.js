@@ -1,8 +1,8 @@
 /* let = funciona  apenas no escopo que foi criada
     const = funciona apenas no escopo que foi criada
     var = funciona no escopo geral, ou seja, no escopo de todos. (não recomendado utilizar)
-*/
 
+ */
 /* Estrutura do If...else */
 /* if (condição) {
   // resultado
@@ -10,7 +10,7 @@
     resultado;
 } else {
     resultado;    
-}
+} */
 
 /* exemplo: */
 /* let grade = 90;
@@ -103,3 +103,36 @@ if (principalDrink === 'café' || alternativeDrink === 'suco de laranja') {
 /* OPERADOR LÓGICO NOT(!) = ELE INVERTE OS VALORES JÁ PRE ESTABELECIDOS. TODOS OS VALORES FALSY VIRAM TRUE E OS TRUTHY VIRAM FALSE. ELE SÓ RETORNA VALOR BOLEANO(TRUE OU FALSE)*/
 /* let number = 10;
 console.log(!number); */
+
+/* Switch - case = É uma alternativa ao IF, ELSE. Você dá uma expressão(variável, por exemplo) e e cria vários casos para essa expressão(é mais para comparação, se a expressão é igual tal caso, por exemplo). No final coloca um Default quando a expressão não respeitar/atender nenhum dos cases*/
+/* Sintaxe:
+    switch () {
+        case(condição):
+        // logica
+        break;
+        case:
+        //lógica;
+        break;
+        .
+        .
+        .
+        default:
+        // lógica;
+    }
+*/
+/* const expr = "oranges";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+} */
+
+/* A configuração `Alguma coisa ${variável ou outra coisa}` é chamada Template Literals*/
+
