@@ -1,3 +1,49 @@
+/* Exercicio 7: Dedução de impostos do salário */
+let salario = 3000;
+let salarioDeduzidoINSS;
+let salarioDeduzidoIR;
+/* Calculo da dedução do  INSS */
+if (salario > 5189.82) {
+    salarioDeduzidoINSS = salario - 570.88;
+} else if (salario >= 2594.93 && salario <= 5189.82) {
+    let aliquota11;
+    aliquota11 = (salario * 11) / 100;
+    salarioDeduzidoINSS = salario - aliquota11;
+} else if (salario >= 1556.95 && salario <= 2594.92) {
+    let aliquota9 = (salario * 9) / 100;
+    salarioDeduzidoINSS = salario - aliquota9;
+} else {
+    let aliquota8 = (salario * 8) / 100;
+    salarioDeduzidoINSS = salario - aliquota8;
+}
+/* Calculo do IR */
+if (salarioDeduzidoINSS > 4664.68) {
+    let aliquota27 = ((salarioDeduzidoINSS * 27.5) / 100) - 869.36;
+    salarioDeduzidoIR = salarioDeduzidoINSS - aliquota27;
+} else if (salarioDeduzidoINSS >= 3751.06 && salarioDeduzidoINSS <= 4664.68) {
+    let aliquota22 = ((salarioDeduzidoINSS * 22.5) / 100) - 636.13;
+    salarioDeduzidoIR = salarioDeduzidoINSS - aliquota22;
+} else if (salarioDeduzidoINSS >= 2826.66 && salarioDeduzidoINSS <= 3751.05) {
+    let aliquota15 = ((salarioDeduzidoINSS * 15) / 100) - 354.80;
+    salarioDeduzidoIR = salarioDeduzidoINSS - aliquota15;
+} else if (salarioDeduzidoINSS >= 1903.99 && salarioDeduzidoINSS <= 2826.65) {
+    let aliquota7 = ((salarioDeduzidoINSS * 7.5) / 100) - 142.80;
+    salarioDeduzidoIR = salarioDeduzidoINSS - aliquota7;
+} else {
+    salarioDeduzidoIR = salarioDeduzidoINSS;
+}
+
+console.log(`Seu salário líquido é: R$ ${salarioDeduzidoIR}`);
+
+/* Exercicio 6: retorne true ou false */
+/* let number01 = 11;
+let number02 = 25;
+let number03 = 47;
+
+let isEven = number01 % 2 == 0 || number02 % 2 == 0 || number03 % 2 == 0 && true;
+
+console.log(isEven);
+ */
 /* let reiInfo = "Move-se uma casa para qualquer direção (horizontal, vertical ou diagonal).";
 let damaInfo = "Move-se quantas casas quiser em qualquer direção (horizontal, vertical ou diagonal).";
 let peaoInfo = "Move-se uma casa à frente (duas no primeiro lance) e captura apenas na diagonal.";
