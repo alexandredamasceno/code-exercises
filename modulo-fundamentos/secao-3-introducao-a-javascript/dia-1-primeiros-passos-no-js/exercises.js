@@ -1,5 +1,5 @@
 /* Exercicio 7: Dedução de impostos do salário */
-let salario = 3000;
+let salario = 1500.10;
 let salarioDeduzidoINSS;
 let salarioDeduzidoIR;
 /* Calculo da dedução do  INSS */
@@ -33,7 +33,11 @@ if (salarioDeduzidoINSS > 4664.68) {
     salarioDeduzidoIR = salarioDeduzidoINSS;
 }
 
-console.log(`Seu salário líquido é: R$ ${salarioDeduzidoIR}`);
+//console.log(`Seu salário líquido é:
+//R$ ${salarioDeduzidoIR.toFixed(2)}`);
+console.log(`Seu salário líquido é:\nR$ ${salarioDeduzidoIR.toFixed(2)}`);
+// o .toFixed() delimita a quantidade de casas decimais após a vírgula
+//console.log("O seu salário líquido é:" + " " + "R$" + " " + salarioDeduzidoIR);
 
 /* Exercicio 6: retorne true ou false */
 /* let number01 = 11;
