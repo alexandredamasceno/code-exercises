@@ -1,18 +1,43 @@
-// Desafio da Piramide de asteriscos:
-const tamanhoDaPiramide = 7;
-let piramide = "";
+// Desafio da Piramide de asteriscos DE LADO INVERTIDO:
+const tamanhoDaPiramide = 10;
+let piramide = "*";
 let piramideArray = "";
-for (let indexA = 0; indexA < tamanhoDaPiramide; indexA += 1) {
-    piramide += "*";
-    for (let indexB = 1; indexB < tamanhoDaPiramide; indexB += 1) {
-        piramide += "*";
-        if (piramide.split("").length == tamanhoDaPiramide) {
+for (let indexA = 1; indexA <= tamanhoDaPiramide; indexA += 1) {
+    let tamanhoBase = tamanhoDaPiramide - indexA;
+    for (let indexB = 1; indexB <= indexA; indexB += 1) {
+        if (piramide.split("").length == indexA ) {
+            piramide = piramide;
+        } else {
+            piramide += "*";
+        }
+    }
+    for (let i = 1; i <= tamanhoBase; i += 1) {
+        piramide += " ";
+    }
+    if (piramide.split("").length == tamanhoDaPiramide) {
+        let arrayInvertido = piramide.split("").reverse();
+        let newArrayInvertido = arrayInvertido.join("");
+        piramideArray += `${newArrayInvertido}\n`;
+        piramide = "*";
+    }
+}
+console.log(piramideArray);
+// Desafio da Piramide de asteriscos:
+/* const tamanhoDaPiramide = 9;
+let piramide = "*";
+let piramideArray = "";
+for (let indexA = 1; indexA <= tamanhoDaPiramide; indexA += 1) {
+    for (let indexB = 1; indexB <= indexA; indexB += 1) {
+        if (piramide.split("").length == indexA ) {
             piramideArray += `${piramide}\n`;
-            piramide = "";
+            piramide = "*";
+        } else {
+            piramide += "*";
         }
     }
 }
-console.log(quadradoArray);
+console.log(piramideArray); */
+//console.log("*" * 2);
 
 
 //Desafio do QUADRADO DE asteriscos:
