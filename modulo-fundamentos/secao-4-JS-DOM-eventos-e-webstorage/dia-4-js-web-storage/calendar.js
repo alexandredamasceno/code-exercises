@@ -26,14 +26,22 @@ for (let index = 1; index <= 28; index += 1) {
 }
 
 //Lógica botão sextou
-getButtonSextou = document.getElementById("botao-sextou");
+let getButtonSextou = document.getElementById("botao-sextou");
 let guardaAllBeforeSextou = [];
 getButtonSextou.addEventListener("click", function () {
     let getAllSextou = document.querySelectorAll(".sextou");
-    guardaAllBeforeSextou = getAllSextou;
+    let textArray = [];
     for (let index = 0; index < getAllSextou.length; index += 1) {
-        getAllSextou[index].innerText = "SEXTOU!!!";
+        textArray.push(getAllSextou[index].innerText);
     }
+    for (let index = 0; index < getAllSextou.length; index += 1) {
+        if (textArray[index] === "SEXTOU!!!") {
+            getAllSextou[index].innerText = guardaAllBeforeSextou[index];
+        } else {
+            getAllSextou[index].innerText = "SEXTOU!!!";
+        }
+    }
+    guardaAllBeforeSextou = textArray;
 });
 
 
