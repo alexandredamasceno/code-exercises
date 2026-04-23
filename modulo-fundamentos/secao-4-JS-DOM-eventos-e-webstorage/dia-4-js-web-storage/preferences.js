@@ -1,70 +1,38 @@
 window.onload = () => {
     let getBody = document.querySelector("body");
 
-    function addStyleSettings(element, storageItem) {
-        console.log(storageItem);
-        
-        let getBackgroundColor = localStorage.getItem(storageItem);
-        console.log(getBackgroundColor);
-        
-        element.style.backgroundColor = getBackgroundColor
+    function addStyleSettings(element, styleSelector, storageItem) {
+        let getItemInStorage = localStorage.getItem(storageItem);
+        element.style[styleSelector] = getItemInStorage;
     }
+
     addStyleSettings(getBody, "background-color");
-    /* addStyleSettings(getBody, "font-color");
     addStyleSettings(getBody, "font-color");
-    addStyleSettings(getBody, "line-height"); */
+    addStyleSettings(getBody, "font-size");
+    addStyleSettings(getBody, "line-height");
+    addStyleSettings(getBody, "font-family");
 
-    /* function addBackgroundColor() {
-        let getBackgroundColor = localStorage.getItem("background-color");
-        getBody.style.backgroundColor = getBackgroundColor
-    }
-    addBackgroundColor(); */
 
-    function addFontColor() {
-        let getFontColor = localStorage.getItem("font-color");
-        getBody.style.color = getFontColor;
-    }
-    addFontColor();
-
-    const addFontSize = () => {
-        let getFontSize = localStorage.getItem("font-size");
-        getBody.style.fontSize = getFontSize;
-    }
-    addFontSize();
-
-    const addLineHeight =  () => {
-        let getLineHeight = localStorage.getItem("line-height");
-        getBody.style.lineHeight = getLineHeight;
-    }
-    addLineHeight();
-
-    const addFontFamily = () => {
-        let getFontFamily = localStorage.getItem("font-family");
-        getBody.style.fontFamily = getFontFamily;
-    }
-    addFontFamily();
-
-    
     // Adiciona addEventListener nos botões de backgroundColor
     let getAllButtonsFromBackgroundColor = document.querySelectorAll("#background-color button");
     for (let index = 0; index < getAllButtonsFromBackgroundColor.length; index += 1) {
         getAllButtonsFromBackgroundColor[index].addEventListener("click", (event) => {
             localStorage.setItem("background-color", event.target.innerText);
 
-            addStyleSettings(getBody, "background-color");
+            addStyleSettings(getBody, "backgroundColor","background-color");
         });
     }
 
     // Adiconar addEventListener nos botões de font-color
-    /* let getAllButtonsFromFontColor = document.querySelectorAll("#font-color button");
+    let getAllButtonsFromFontColor = document.querySelectorAll("#font-color button");
     for (let index = 0; index < getAllButtonsFromFontColor.length; index += 1) {
         getAllButtonsFromFontColor[index].addEventListener("click", (event) => {
             console.log(event.target.innerText);
             localStorage.setItem("font-color", event.target.innerText);
 
-            addFontColor();
+            addStyleSettings(getBody, "color","font-color");
         });
-    } */
+    }
 
     // Adicona addEventListener nos botões de font-size
     let getAllButtonsFromFontSize = document.querySelectorAll("#font-size button");
@@ -73,7 +41,7 @@ window.onload = () => {
             console.log(event.target.innerText);
             localStorage.setItem("font-size", event.target.innerText);
 
-            addFontSize();
+            addStyleSettings(getBody, "fontSize","font-size");
         });
     }
 
@@ -84,7 +52,7 @@ window.onload = () => {
             console.log(event.target.innerText);
             localStorage.setItem("line-height", event.target.innerText);
 
-            addLineHeight();
+            addStyleSettings(getBody, "lineHeight","line-height");
         });
     }
 
@@ -95,7 +63,7 @@ window.onload = () => {
             console.log(event.target.innerText);
             localStorage.setItem("font-family", event.target.innerText);
 
-            addFontFamily();
+            addStyleSettings(getBody, "fontFamily","font-family");
         });
     }
 }
