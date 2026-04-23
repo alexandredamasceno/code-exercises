@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+
+#dias-da-semana {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dia-da-semana {
+    list-style: none;
+    width: 14.28%;
+}
+
+#dias-do-mes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dia-do-mes {
+    list-style: none;
+    width: 14.28%;
+}
