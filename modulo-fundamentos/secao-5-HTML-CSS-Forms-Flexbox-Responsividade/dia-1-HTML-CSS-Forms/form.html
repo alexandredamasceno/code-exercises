@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulário</h1>
+    <form action="" method="get" enctype="multipart/form-data">
+        <label for="input-name">Nome completo:
+            <input type="text" name="name" placeholder="Digite seu nome completo" autofocus required id="input-name">
+        </label>
+        <br>
+        <label for="input-email">Email:
+            <input type="email" name="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus
+                id="input-email">
+        </label>
+        <br>
+        <label for="input-estado">Estado onde você mora:
+            <select name="estado" id="input-estado">
+                <option value="MA">Maranhão</option>
+                <option value="DF" selected>Distrito Federal</option>
+                <option value="SP">São Paulo</option>
+            </select>
+        </label>
+        <br>
+        <p>Selecione sua foto:</p>
+        <input type="file" name="foto" required id="id-foto">
+        <br>
+        <p>Comidas Favoritas:</p>
+        <label for="pizza">
+            <input type="radio" name="comida" required id="pizza">Pizza
+        </label>
+        <label for="açai">
+            <input type="radio" name="comida" required id="açai" checked>Açaí
+        </label>
+        <label for="hamburguer">
+            <input type="radio" name="comida" required id="hamburguer">Hamburguer
+        </label>
+        <br>
+        <p>Escreva algo sobre você:</p>
+        <textarea name="text-area" id="text-area" cols="20" rows="5"></textarea>
+        <br>
+        <br>
+        <label for="input-password">Senha:
+            <input type="password" name="password" placeholder="Digite sua senha" required id="input-password">
+        </label>
+        <br>
+        <br>
+        <label for="input-checkbox">
+            <input type="checkbox" name="checkbox" id="input-checkbox">Lembre-me
+        </label>
+        <br>
+        <br>
+        <button type="submit">Enviar Formulário</button>
+    </form>
+</body>
+
+</html>
