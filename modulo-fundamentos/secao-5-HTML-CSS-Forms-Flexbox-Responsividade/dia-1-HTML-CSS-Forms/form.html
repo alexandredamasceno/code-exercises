@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css" type="text/css">
 </head>
 
 <body>
-    <h1>Formulário</h1>
-    <form action="" method="get" enctype="multipart/form-data">
+    <header class="quadro-padrao">
+        <h1>Developer's Forms</h1>
+    </header>
+    <form action="" method="get" enctype="multipart/form-data" class="quadro-padrao form">
         <label for="input-name">Nome completo:
-            <input type="text" name="name" placeholder="Digite seu nome completo" autofocus required id="input-name">
+            <input type="text" name="name" placeholder="Digite seu nome completo" autofocus required id="input-name" maxlength="50">
         </label>
         <br>
         <label for="input-email">Email:
-            <input type="email" name="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus
-                id="input-email">
+            <input type="email" name="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus id="input-email" maxlength="40">
         </label>
         <br>
         <label for="input-estado">Estado onde você mora:
@@ -28,21 +30,24 @@
         </label>
         <br>
         <p>Selecione sua foto:</p>
-        <input type="file" name="foto" required id="id-foto">
+        <input type="file" name="foto" id="id-foto">
         <br>
-        <p>Comidas Favoritas:</p>
-        <label for="pizza">
-            <input type="radio" name="comida" required id="pizza">Pizza
-        </label>
-        <label for="açai">
-            <input type="radio" name="comida" required id="açai" checked>Açaí
-        </label>
-        <label for="hamburguer">
-            <input type="radio" name="comida" required id="hamburguer">Hamburguer
-        </label>
+        <!-- <p>Comidas Favoritas:</p> -->
+        <fieldset>
+            <legend>Comidas Favoritas:</legend>
+            <label for="pizza">
+                <input type="radio" name="comida" required id="pizza" value="Pizza">Pizza
+            </label>
+            <label for="açai">
+                <input type="radio" name="comida" required id="açai" value="Açaí" checked>Açaí
+            </label>
+            <label for="hamburguer">
+                <input type="radio" name="comida" required id="hamburguer" value="Hamburguer">Hamburguer
+            </label>
+        </fieldset>
         <br>
         <p>Escreva algo sobre você:</p>
-        <textarea name="text-area" id="text-area" cols="20" rows="5"></textarea>
+        <textarea name="text-area" id="text-area" cols="30" rows="7" maxlength="100"></textarea>
         <br>
         <br>
         <label for="input-password">Senha:
@@ -51,7 +56,7 @@
         <br>
         <br>
         <label for="input-checkbox">
-            <input type="checkbox" name="checkbox" id="input-checkbox">Lembre-me
+            <input type="checkbox" name="checkbox" id="input-checkbox" value="lembre-me aceito">Lembre-me
         </label>
         <br>
         <br>
