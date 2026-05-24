@@ -12,6 +12,11 @@ h1, form {
     padding: 30px;
 }
 
+h1 {
+    text-align: center;
+    line-height: 100px;
+}
+
 textarea {
     resize: none;
 }
