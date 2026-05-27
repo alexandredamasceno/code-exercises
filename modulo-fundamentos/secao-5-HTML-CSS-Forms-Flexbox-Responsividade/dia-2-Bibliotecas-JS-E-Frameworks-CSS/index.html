@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Developer's Forms</h1>
+    </header>
+    <form action="" method="get" enctype="multipart/form-data">
+        <label for="input-name">Nome completo:
+            <input type="text" name="name" placeholder="Digite seu nome completo" autofocus required id="input-name"
+                maxlength="50">
+        </label>
+        <br>
+        <label for="input-email">Email:
+            <input type="email" name="email" placeholder="Digite seu e-mail" required autocomplete="off" autofocus
+                id="input-email" maxlength="40">
+        </label>
+        <br>
+        <label for="input-estado">Estado onde você mora:
+            <select name="estado" id="input-estado">
+                <option value="MA">Maranhão</option>
+                <option value="DF" selected>Distrito Federal</option>
+                <option value="SP">São Paulo</option>
+            </select>
+        </label>
+        <br>
+        <p>Selecione sua foto:</p>
+        <input type="file" name="foto" id="id-foto">
+        <br>
+        <!-- <p>Comidas Favoritas:</p> -->
+        <fieldset>
+            <legend>Comidas Favoritas:</legend>
+            <label for="pizza">
+                <input type="radio" name="comida" required id="pizza" value="Pizza">Pizza
+            </label>
+            <label for="açai">
+                <input type="radio" name="comida" required id="açai" value="Açaí" checked>Açaí
+            </label>
+            <label for="hamburguer">
+                <input type="radio" name="comida" required id="hamburguer" value="Hamburguer">Hamburguer
+            </label>
+        </fieldset>
+        <br>
+        <p>Escreva algo sobre você:</p>
+        <textarea name="text-area" id="text-area" cols="30" rows="7" maxlength="100"></textarea>
+        <br>
+        <br>
+        <label for="input-password">Senha:
+            <input type="password" name="password" placeholder="Digite sua senha" required id="input-password">
+        </label>
+        <br>
+        <br>
+        <label for="input-checkbox">
+            <input type="checkbox" name="checkbox" id="input-checkbox" value="lembre-me aceito">Lembre-me
+        </label>
+        <br>
+        <br>
+        <button type="submit">Enviar Formulário</button>
+    </form>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
